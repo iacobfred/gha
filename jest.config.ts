@@ -10,7 +10,7 @@ const jestConfig: Config.InitialOptions = {
   transform: {
     "^.+\\.ts$": ["ts-jest", { tsconfig: "tsconfig.test.json" }],
   },
-  silent: false,
+  silent: true,
   projects: [
     {
       displayName: "generate-dotenv",
