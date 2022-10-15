@@ -4,6 +4,8 @@
   <a href=""><img alt="deploy-docker-ssh status" src="https://github.com/iacobfred/deploy-docker-ssh/workflows/units-test/badge.svg"></a>
 </p>
 
+FOR NOW, USE THIS REPO: https://github.com/iacobfred/deploy-docker-ssh
+
 This [action](https://docs.github.com/en/actions) pulls Docker images (and any necessary files)
 to a remote server via an SSH connection and starts up the associated container(s) after optionally
 running additional commands on the server.
