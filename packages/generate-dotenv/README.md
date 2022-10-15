@@ -4,6 +4,8 @@
   <a href=""><img alt="deploy-docker-ssh status" src="https://github.com/iacobfred/generate-dotenv/workflows/units-test/badge.svg"></a>
 </p>
 
+FOR NOW, USE THIS REPO: https://github.com/iacobfred/generate-dotenv
+
 This action generates a dotenv file (for use in a GitHub Actions workflow) by running `envsubst` on a specified template file (e.g., `_.env`) or multiple template files (e.g., `_.env` and `_.env.production`), which must
 be included in source control.
 
