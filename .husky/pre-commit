@@ -14,5 +14,5 @@ fi
 
 npx lint-staged
 npm run package --workspace=deploy-docker-ssh --workspace=generate-dotenv
-git add -- **/dist
+git add -- packages/**/dist
 npm run test
