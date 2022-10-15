@@ -5,9 +5,9 @@ name: Publish
 
 # Manual or automatic release
 on:
-  # release:
-  #   types: [published, edited]
   push:
+    branches:
+      - main
     tags:
       - v*
 
