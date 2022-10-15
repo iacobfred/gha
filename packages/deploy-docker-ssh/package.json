@@ -1,40 +1,39 @@
 {
-  "name": "generate-dotenv",
+  "name": "deploy-docker-ssh",
+  "version": "0.2.6",
   "private": true,
-  "description": "Generates a dotenv file for use within GitHub Actions.",
+  "description": "Deploys a docker container to a remote host",
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
     "format": "prettier -w .; eslint . --fix",
     "lint": "eslint .",
     "package": "ncc build src/main.ts --license licenses.txt",
-    "test": "jest --config ../../jest.config.ts --selectProjects=generate-dotenv"
+    "test": "jest --config ../../jest.config.ts --passWithNoTests"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/iacobfred/generate-dotenv.git"
+    "url": "git+https://github.com/iacobfred/deploy-docker-ssh.git"
   },
   "keywords": [
     "Actions",
-    "dotenv",
-    "GitHub"
+    "Docker",
+    "GitHub",
+    "SSH"
   ],
   "author": "Jacob Fredericksen <jacob.t.fredericksen@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/iacobfred/generate-dotenv/issues"
+    "url": "https://github.com/iacobfred/deploy-docker-ssh/issues"
   },
-  "homepage": "https://github.com/iacobfred/generate-dotenv#readme",
+  "homepage": "https://github.com/iacobfred/deploy-docker-ssh#readme",
   "dependencies": {
-    "@actions/cache": "*",
     "@actions/core": "*",
-    "crypto-js": "^4.1.1",
-    "dotenv": "^16.0.3"
+    "@actions/exec": "*",
+    "nanoid": "^4.0.0"
   },
   "devDependencies": {
     "@jest/types": "*",
-    "@types/crypto-js": "^4.1.1",
-    "@types/jest": "*",
     "@types/node": "*",
     "@typescript-eslint/parser": "*",
     "@vercel/ncc": "*",

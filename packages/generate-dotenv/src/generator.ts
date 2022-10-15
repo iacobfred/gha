@@ -27,6 +27,7 @@ const POSTPROCESSING_REPLACEMENT_PATTERNS: [RegExp, string, string][] = [
   // Wrap values containing spaces and/or parentheses in double quotes
   // if they are not already wrapped in double/single quotes.
   [
+    // eslint-disable-next-line no-useless-escape
     /(^[A-Z_]+?=)([^\n"']+?[ \(\)][^\n"]+?)$/gm,
     '$1"$2"',
     "Wrap values containing spaces and/or parentheses in double quotes",

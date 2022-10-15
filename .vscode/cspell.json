@@ -1,5 +1,16 @@
 {
   "language": "en",
-  "words": ["camelcase", "dotenv", "envsubst"],
+  "words": [
+    "camelcase",
+    "codeql",
+    "dotenv",
+    "envsubst",
+    "Fredericksen",
+    "ghcr",
+    "keyscan",
+    "mkdir",
+    "Patreon",
+    "shellcheck"
+  ],
   "flagWords": ["hte"]
 }

@@ -1,11 +1,15 @@
 {
   "plugins": ["jest", "@typescript-eslint"],
-  "extends": ["plugin:github/recommended"],
+  "extends": [
+    "plugin:github/recommended",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaVersion": 9,
     "sourceType": "module",
-    "project": ["./tsconfig.json", "./tsconfig.tests.json"]
+    "project": ["./packages/**/tsconfig.json", "./tsconfig.spec.json"]
   },
   "rules": {
     "i18n-text/no-en": "off",
@@ -17,7 +21,6 @@
     "import/no-namespace": "off",
     "no-unused-vars": "off",
     "no-useless-escape": "warn",
-    "prettier/prettier": "warn",
     "@typescript-eslint/no-unused-vars": "error",
     "@typescript-eslint/explicit-member-accessibility": [
       "error",

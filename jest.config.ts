@@ -1,15 +1,25 @@
 import type { Config } from "@jest/types";
 
-export default async (): Promise<Config.InitialOptions> => {
-  return {
-    preset: "ts-jest",
-    testEnvironment: "node",
-    verbose: true,
-    clearMocks: true,
-    moduleFileExtensions: ["js", "ts"],
-    testMatch: ["**/*.test.ts"],
-    transform: {
-      "^.+\\.ts$": "ts-jest",
+const jestConfig: Config.InitialOptions = {
+  preset: "ts-jest",
+  testEnvironment: "node",
+  verbose: true,
+  clearMocks: true,
+  moduleFileExtensions: ["js", "ts"],
+  testMatch: ["**/*.test.ts"],
+  transform: {
+    "^.+\\.ts$": ["ts-jest", { tsconfig: "tsconfig.test.json" }],
+  },
+  silent: false,
+  projects: [
+    {
+      displayName: "generate-dotenv",
+      testMatch: ["<rootDir>/packages/**/*.test.ts"],
+      transform: {
+        "^.+\\.ts$": ["ts-jest", { tsconfig: "<rootDir>/tsconfig.spec.json" }],
+      },
     },
-  };
+  ],
 };
+
+export default jestConfig;

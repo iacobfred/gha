@@ -13,5 +13,6 @@ if [ "$branch" = "main" ]; then
 fi
 
 npx lint-staged
-npm run package && git add dist
+npm run package --workspace=deploy-docker-ssh --workspace=generate-dotenv
+git add -- **/dist
 npm run test
