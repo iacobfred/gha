@@ -1,0 +1,40 @@
+# action.yml
+name: "Deploy containers"
+description: "Pull Docker images to a remote server and deploy associated containers."
+author: "Jacob Fredericksen"
+branding:
+  icon: "arrow-right"
+  color: "green"
+inputs:
+  host:
+    description: "The host name or IP address of the server to which this action will connect via SSH to deploy the image."
+    required: true
+  user:
+    description: "The username to use when connecting to the server via SSH"
+    required: true
+  files:
+    description: "A space-delimited list of filepaths (relative to `source-dir`) to be transferred/synced to the server (e.g., 'docker-compose.yml')"
+    required: false
+    default: ""
+  source-dir:
+    description: "The directory within the repository that contains the files to be transferred/synced to the server."
+    required: false
+    default: "."
+  target-dir:
+    description: "The absolute filepath of the directory to which necessary files (e.g., docker-compose.yml) will be transferred/synced on the server"
+    required: true
+  ssh-port:
+    description: "The SSH port (e.g., 22) to use for connecting to the server"
+    required: false
+    default: "22"
+  ssh-private-key:
+    description: "The private key generated on the server, used to authenticate the SSH connection"
+    required: true
+  command:
+    description: "The command to run on the server to deploy the container"
+    required: true
+runs:
+  using: "node16"
+  main: "dist/index.js"
+  post: "dist/index.js"
+  post-if: "always()"
