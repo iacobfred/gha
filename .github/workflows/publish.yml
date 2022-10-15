@@ -5,8 +5,11 @@ name: Publish
 
 # Manual or automatic release
 on:
-  release:
-    types: [published, edited]
+  push:
+    branches:
+      - main
+    tags:
+      - v*
 
 jobs:
   publish:
@@ -17,13 +20,4 @@ jobs:
         uses: actions/checkout@v3
         with:
           ref: ${{ github.event.release.tag_name }}
-
-      - name: Setup Node
-        uses: actions/setup-node@v3.5.1
-
-      # Compile dist/index.js and bundle with action.yml
-      # Force push major and minor tags, e.g. v1, v1.0
-      # See documentation: https://github.com/JasonEtco/build-and-tag-action
-      - uses: JasonEtco/build-and-tag-action@v2
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
+      - uses: int128/release-typescript-action@v1
