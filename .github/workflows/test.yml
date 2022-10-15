@@ -25,7 +25,7 @@ jobs:
       - id: generate-dotenv
         uses: ./packages/generate-dotenv/
         with:
-          template-paths: "tests/stubs/_.env"
+          template-paths: "packages/generate-dotenv/tests/stubs/_.env"
       - name: Cache dotenv
         id: cache-dotenv
         uses: actions/cache@v3
