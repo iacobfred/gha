@@ -3,6 +3,7 @@
   "private": true,
   "description": "Generates a dotenv file for use within GitHub Actions.",
   "main": "dist/index.js",
+  "version": "1.0.0",
   "scripts": {
     "build": "tsc",
     "format": "prettier -w .; eslint . --fix",

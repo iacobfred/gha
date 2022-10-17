@@ -2,11 +2,13 @@
   "name": "gha",
   "private": true,
   "description": "Monorepo for GitHub Actions action packages",
+  "engines": {
+    "yarn": ">=3.2.4"
+  },
   "scripts": {
     "build": "tsc",
     "format": "prettier -w .; eslint . --fix",
     "lint": "eslint .",
-    "package": "ncc build src/main.ts --license licenses.txt",
     "test": "jest",
     "prepare": "husky install"
   },
@@ -58,5 +60,6 @@
   },
   "workspaces": [
     "packages/*"
-  ]
+  ],
+  "packageManager": "yarn@3.2.4"
 }

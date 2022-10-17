@@ -1,9 +1,9 @@
 {
   "name": "deploy-docker-ssh",
-  "version": "0.2.6",
   "private": true,
   "description": "Deploys a docker container to a remote host",
   "main": "dist/index.js",
+  "version": "1.0.0",
   "scripts": {
     "build": "tsc",
     "format": "prettier -w .; eslint . --fix",

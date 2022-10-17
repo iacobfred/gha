@@ -13,5 +13,5 @@ if [ "$branch" = "main" ]; then
 fi
 
 npx lint-staged
-npm run package --workspace=deploy-docker-ssh --workspace=generate-dotenv
-npm run test
+yarn workspaces foreach run package
+yarn test

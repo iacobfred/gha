@@ -15,13 +15,17 @@ jobs:
         package: [generate-dotenv, deploy-docker-ssh]
     steps:
       - uses: actions/checkout@v3
-      - run: npm ci
-      - run: npm test
+      - run: yarn install --frozen-lockfile
+      - run: yarn test
 
   test-dotenv:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+      - name: Rebuild the dist/ directory
+        run: yarn workspace generate-dotenv package
       - id: generate-dotenv
         uses: ./packages/generate-dotenv/
         with:
@@ -40,6 +44,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+      - name: Rebuild the dist/ directory
+        run: yarn workspace deploy-docker-ssh package
       - uses: ./packages/deploy-docker-ssh/
         with:
           host: ${{ secrets.SERVER_HOST }}
