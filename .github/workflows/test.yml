@@ -15,7 +15,6 @@ jobs:
         package: [generate-dotenv, deploy-docker-ssh]
     steps:
       - uses: actions/checkout@v3
-      - run: corepack enable && yarn set version stable 
       - run: yarn install --frozen-lockfile
       - run: yarn test
 
