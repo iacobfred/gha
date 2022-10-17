@@ -19,4 +19,6 @@ jobs:
         uses: actions/checkout@v3
         with:
           ref: ${{ github.event.release.tag_name }}
-      - uses: int128/release-typescript-action@v1
+      - uses: iacobfred/release-typescript-action@v1
+        with:
+          increment-level: patch
