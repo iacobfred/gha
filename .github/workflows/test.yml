@@ -15,8 +15,8 @@ jobs:
         package: [generate-dotenv, deploy-docker-ssh]
     steps:
       - uses: actions/checkout@v3
-      - run: npm ci
-      - run: npm test
+      - run: yarn install --frozen-lockfile
+      - run: yarn test
 
   test-dotenv:
     runs-on: ubuntu-latest
