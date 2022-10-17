@@ -6,19 +6,16 @@ dist
 # Logs
 logs
 *.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-lerna-debug.log*
-
-# TypeScript v1 declaration files
-typings/
 
 # TypeScript cache
 *.tsbuildinfo
 
-# Optional npm cache directory
+# Package management
+.yarn
 .npm
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
 # Optional eslint cache
 .eslintcache

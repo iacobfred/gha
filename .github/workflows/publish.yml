@@ -19,6 +19,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           ref: ${{ github.event.release.tag_name }}
+      - run: yarn workspaces foreach run package
       - uses: iacobfred/release-typescript-action@v1
         with:
           increment-level: patch

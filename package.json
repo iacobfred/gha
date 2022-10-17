@@ -6,7 +6,6 @@
     "build": "tsc",
     "format": "prettier -w .; eslint . --fix",
     "lint": "eslint .",
-    "package": "ncc build src/main.ts --license licenses.txt",
     "test": "jest",
     "prepare": "husky install"
   },
