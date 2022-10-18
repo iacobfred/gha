@@ -1,9 +1,9 @@
 ##
 # Publish new action tag(s) for downstream consumption
 ##
+
 name: Publish
 
-# Manual or automatic release
 on:
   push:
     branches:
