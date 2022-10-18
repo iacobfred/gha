@@ -1,7 +1,9 @@
 ##
 # Label incoming pull requests according to configuration in .github/labeler.yml
 ##
+
 name: Apply labels
+
 on:
   - pull_request_target
 

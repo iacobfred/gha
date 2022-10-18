@@ -7,8 +7,8 @@ on:
       - "releases/*"
 
 jobs:
-  # unit tests
   units:
+    name: Run unit tests
     runs-on: ubuntu-latest
     strategy:
       matrix:
