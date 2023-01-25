@@ -856,6 +856,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@jest/schemas@npm:^29.4.0":
+  version: 29.4.0
+  resolution: "@jest/schemas@npm:29.4.0"
+  dependencies:
+    "@sinclair/typebox": ^0.25.16
+  checksum: 005c90b7b641af029133fa390c0c8a75b63edf651da6253d7c472a8f15ddd18aa139edcd4236e57f974006e39c67217925768115484dbd7bfed2eba224de8b7d
+  languageName: node
+  linkType: hard
+
 "@jest/source-map@npm:^29.2.0":
   version: 29.2.0
   resolution: "@jest/source-map@npm:29.2.0"
@@ -925,6 +934,20 @@ __metadata:
     "@types/yargs": ^17.0.8
     chalk: ^4.0.0
   checksum: 6b04cbb23306f16eaf4f0d158cfcb7cc905b352e2e44a0a4618c46cf3bdf7a1da64cea8fbc731a19e8a86dc5b80a75aec985cf8764b3178939b5d850ccc68b57
+  languageName: node
+  linkType: hard
+
+"@jest/types@npm:^29.4.0":
+  version: 29.4.0
+  resolution: "@jest/types@npm:29.4.0"
+  dependencies:
+    "@jest/schemas": ^29.4.0
+    "@types/istanbul-lib-coverage": ^2.0.0
+    "@types/istanbul-reports": ^3.0.0
+    "@types/node": "*"
+    "@types/yargs": ^17.0.8
+    chalk: ^4.0.0
+  checksum: be901c76df3d528e50901d6008b49960acaa762ccbf2cf68311f72c13dbe0ee179862b4e45061b419ad173b049b78dc87641b4fb23bba0539eebd955a9e12f7d
   languageName: node
   linkType: hard
 
@@ -1048,6 +1071,13 @@ __metadata:
   version: 0.24.46
   resolution: "@sinclair/typebox@npm:0.24.46"
   checksum: 19d708fe93a42dce4ed6452a58909c841ad3484a6388a5b5d82e7ab11f8bfbd013bf34c32d6234a55532e4ff5f8ab9e1df17bb13b389aca038c7f05a8950a72a
+  languageName: node
+  linkType: hard
+
+"@sinclair/typebox@npm:^0.25.16":
+  version: 0.25.21
+  resolution: "@sinclair/typebox@npm:0.25.21"
+  checksum: 763af1163fe4eabee9b914d4e4548a39fbba3287d2b3b1ff043c1da3c5a321e99d50a3ca94eb182988131e00b006a6f019799cde8da2f61e2f118b30b0276a00
   languageName: node
   linkType: hard
 
@@ -3202,7 +3232,7 @@ __metadata:
   dependencies:
     "@actions/cache": ^3.0.4
     "@actions/core": ^1.10.0
-    "@jest/types": ^29.2.0
+    "@jest/types": ^29.4.0
     "@types/jest": ^29.1.2
     "@types/node": ^18.11.0
     "@typescript-eslint/eslint-plugin": ^5.40.0
