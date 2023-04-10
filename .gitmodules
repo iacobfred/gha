@@ -1,0 +1,3 @@
+[submodule "packages/deploy-docker-ssh"]
+	path = packages/deploy-docker-ssh
+	url = https://github.com/iacobfred/deploy-docker-ssh.git

@@ -9,7 +9,7 @@
     "build": "tsc",
     "format": "prettier -w .; eslint . --fix",
     "lint": "eslint .",
-    "test": "jest",
+    "test": "jest --passWithNoTests",
     "prepare": "husky install"
   },
   "repository": {
