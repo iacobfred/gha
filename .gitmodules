@@ -1,3 +1,6 @@
 [submodule "packages/deploy-docker-ssh"]
 	path = packages/deploy-docker-ssh
 	url = https://github.com/iacobfred/deploy-docker-ssh.git
+[submodule "packages/generate-dotenv"]
+	path = packages/generate-dotenv
+	url = https://github.com/iacobfred/generate-dotenv.git
